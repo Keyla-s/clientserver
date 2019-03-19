@@ -4,7 +4,7 @@ import java.io.*;
   class server {
    private ServerSocket serverSocket;
    
-   public GreetingServer(int port) throws IOException {
+   public server(int port) throws IOException {
       serverSocket = new ServerSocket(port);
       serverSocket.setSoTimeout(10000);
    }
