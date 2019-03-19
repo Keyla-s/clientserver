@@ -1,8 +1,7 @@
-
 import java.net.*;
 import java.io.*;
 
-  class GreetingServer extends Thread  {
+  class server {
    private ServerSocket serverSocket;
    
    public GreetingServer(int port) throws IOException {
@@ -39,7 +38,7 @@ import java.io.*;
    public static void main(String [] args) {
       int port = Integer.parseInt(args[0]);
       try {
-         Thread t = new GreetingServer(port);
+         Thread t = new server(8080);
          t.start();
       } catch (IOException e) {
          e.printStackTrace();
