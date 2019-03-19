@@ -38,7 +38,7 @@ import java.io.*;
    public static void main(String [] args) {
       int port = Integer.parseInt(args[0]);
       try {
-         Thread t = new server(8080);
+         Server server = new server(8080);
          t.start();
       } catch (IOException e) {
          e.printStackTrace();
