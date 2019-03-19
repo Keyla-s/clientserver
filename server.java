@@ -4,6 +4,10 @@ import java.io.*;
   class server {
    private ServerSocket serverSocket;
    
+   private Socket         socket = null;
+   private ServerSocket   server = null;
+   private DataInputStream in = null;
+    
    public server(int port) throws IOException {
       serverSocket = new ServerSocket(port);
       serverSocket.setSoTimeout(10000);
