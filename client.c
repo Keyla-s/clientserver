@@ -28,17 +28,17 @@ int main(int argc, char const *argv[])
     // Convert IPv4 and IPv6 addresses from text to binary form 
     if(inet_pton(AF_INET, "192.168.211.132", &serv_addr.sin_addr)<=0)  
     { 
-        printf("\nInvalid address/ Address not supported \n"); 
+        printf("\nWuxiao dizhi/ Address not supported \n"); 
         return -1; 
     } 
    
     if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) 
     { 
-        printf("\nConnection Failed \n"); 
+        printf("\nLianjie shibai\n"); 
         return -1; 
     } 
     send(sock , hello , strlen(hello) , 0 ); 
-    printf("Hello message sent\n"); 
+    printf("Ni hao xiaoxi fasong\n"); 
     valread = read( sock , buffer, 1024); 
     printf("%s\n",buffer ); 
     return 0; 
