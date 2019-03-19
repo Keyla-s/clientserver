@@ -21,7 +21,7 @@ public class server
     String receiveMessage,sendMessage;
     while(true)
     {
-      if((receiveMessage=receiveRead,readLine())!=null)
+      if(receiveMessage=receiveRead.readLine())!=null)
       {
         System.out.println(receiveMessage);
       }
