@@ -1,8 +1,8 @@
-// File Name GreetingServer.java
+
 import java.net.*;
 import java.io.*;
 
-public class GreetingServer  {
+public class GreetingServer extends Thread  {
    private ServerSocket serverSocket;
    
    public GreetingServer(int port) throws IOException {
