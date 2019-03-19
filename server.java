@@ -35,13 +35,19 @@ import java.io.*;
       }
    }
    
-   public static void main(String [] args) {
-      int port = Integer.parseInt(args[0]);
-      try {
-         Server server = new server(8080);
-         t.start();
-      } catch (IOException e) {
-         e.printStackTrace();
-      }
-   }
-}
+     // close connection 
+            socket.close(); 
+            in.close(); 
+        } 
+        catch(IOException i) 
+        { 
+            System.out.println(i); 
+        } 
+    } 
+  
+    public static void main(String args[]) 
+    { 
+        Server server = new server(8080); 
+    } 
+} 
+  
