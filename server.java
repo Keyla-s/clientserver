@@ -2,7 +2,7 @@
 import java.net.*;
 import java.io.*;
 
-public class GreetingServer extends Thread {
+public class GreetingServer  {
    private ServerSocket serverSocket;
    
    public GreetingServer(int port) throws IOException {
