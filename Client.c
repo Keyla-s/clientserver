@@ -2,6 +2,8 @@
 #include <sys/socket.h> 
 #include <stdlib.h> 
 #include <netinet/in.h> 
+#include <unistd.h>
+#include <arpa/inet.h>
 #include <string.h> 
 #define PORT 8080 
    
@@ -14,7 +16,7 @@ int main(int argc, char const *argv[])
     char buffer[1024] = {0}; 
     if ((sock = socket(AF_INET, SOCK_STREAM, 0)) < 0) 
     { 
-        printf("\n Socket creation error \n"); 
+        printf("\n Socket menghadapi kesulitan \n"); 
         return -1; 
     } 
    
@@ -32,11 +34,11 @@ int main(int argc, char const *argv[])
    
     if (connect(sock, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0) 
     { 
-        printf("\nConnection Failed \n"); 
+        printf("\nConnection Gagal \n"); 
         return -1; 
     } 
     send(sock , hello , strlen(hello) , 0 ); 
-    printf("Hello message sent\n"); 
+    printf("Assalammualaikum dihantar...\n"); 
     valread = read( sock , buffer, 1024); 
     printf("%s\n",buffer ); 
     return 0; 
