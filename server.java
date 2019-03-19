@@ -2,10 +2,10 @@
 import java.net.*;
 import java.io.*;
 
-public class GreetingServer extends Thread  {
+public class server extends Thread  {
    private ServerSocket serverSocket;
    
-   public GreetingServer(int port) throws IOException {
+   public server(int port) throws IOException {
       serverSocket = new ServerSocket(port);
       serverSocket.setSoTimeout(10000);
    }
@@ -39,7 +39,7 @@ public class GreetingServer extends Thread  {
    public static void main(String [] args) {
       int port = Integer.parseInt(args[0]);
       try {
-         Thread t = new GreetingServer(port);
+         Thread t = new server(port);
          t.start();
       } catch (IOException e) {
          e.printStackTrace();
