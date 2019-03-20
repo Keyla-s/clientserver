@@ -9,14 +9,12 @@ public class server
     Socket sock = serversocket.accept();
     System.out.println("Waalaikummuslam");
     
-    BufferedReader keyRead = new BufferedReader
-      (new InputStreamReader(System.in));
+    BufferedReader keyRead = new BufferedReader (new InputStreamReader(System.in));
     OutputStream ostream = sock.getOutputStream();
-    printerWriter pwrite = new PrinterWriter(ostream,true);
+    PrintWriter pwrite = new PrintWriter(ostream,true);
     
     InputStream istream = sock.getInputStream();
-    BufferedReader receivedRead = new BufferedReader
-      (new InputStreamReader(istream));
+    BufferedReader receivedRead = new BufferedReader(new InputStreamReader(istream));
     
     String receiveMessage,sendMessage;
     while(true)
