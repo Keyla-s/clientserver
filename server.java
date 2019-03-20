@@ -4,7 +4,7 @@ public class server
 {
 public static void main(String[] args)throws Exception
 {
-ServerSocket serversocket = new ServerSocket(1234);
+ServerSocket serversocket = new ServerSocket(8080);
 System.out.println("Server ready for chatting");
 Socket sock = serversocket.accept();
 System.out.println("Waalaikummussalam");
